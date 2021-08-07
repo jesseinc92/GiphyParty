@@ -15,7 +15,7 @@ async function getGIF(event) {
     event.preventDefault();
 
     const search = giphyInput.value;
-    const response = await axios.get('https://api.giphy.com/v1/gifs/search', {params: {q: search, api_key: apiKey}});
+    const response = await axios.get('http://api.giphy.com/v1/gifs/search', {params: {q: search, api_key: apiKey}});
     const imageUrl = response.data.data[0].embed_url;
     const imageWidth = response.data.data[0].images.original.width;
     const imageHeight = response.data.data[0].images.original.height;
