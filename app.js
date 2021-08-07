@@ -11,14 +11,18 @@ removeBtn.addEventListener('click', () => {
     container.innerHTML = '';
 });
 
+// get GIF url and create HTML element
 async function getGIF(event) {
     event.preventDefault();
 
     const search = giphyInput.value;
     const response = await axios.get('http://api.giphy.com/v1/gifs/search', {params: {q: search, api_key: apiKey}});
-    const imageUrl = response.data.data[0].embed_url;
-    const imageWidth = response.data.data[0].images.original.width;
-    const imageHeight = response.data.data[0].images.original.height;
+
+    let randomIndex = Math.floor(Math.random() * response.data.data.length);
+
+    const imageUrl = response.data.data[randomIndex].embed_url;
+    const imageWidth = response.data.data[randomIndex].images.original.width;
+    const imageHeight = response.data.data[randomIndex].images.original.height;
 
     const newGIF = createImage(imageUrl, imageWidth, imageHeight);
 
