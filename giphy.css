@@ -1,0 +1,43 @@
+body {
+    height: 100vh;
+    background-color: #9E9E9E;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+form {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+input {
+    width: 10%;
+    padding: 15px;
+}
+
+button {
+    border: none;
+    padding: 15px 30px;
+    color: white;
+}
+
+#search-button {
+    background-color: #616161;
+}
+
+#remove-button {
+    background-color: #FF5722;
+}
+
+#container {
+    max-height: 60%;
+}
+
+iframe {
+    border: none;
+    margin: 2rem;
+}
